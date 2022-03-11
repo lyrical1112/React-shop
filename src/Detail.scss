@@ -1,0 +1,46 @@
+$메인칼라 : #ff0000;
+
+.red {
+    color: $메인칼라;
+}
+
+.wow-enter {
+    opacity: 0;
+}
+
+.wow-enter-active {
+    opacity: 1;
+    transition: all 500ms;
+}
+
+@mixin 함수() {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.my-alert {
+    @include 함수();
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.my-alert {
+    @extend .my-alert;
+    background-color: #ffe591;
+}
+
+// div.container {
+//     h4 {
+//         color: blue;
+//     }
+
+//     p {
+//         color: brown;
+//     }
+// }
